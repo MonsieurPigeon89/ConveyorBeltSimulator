@@ -1,6 +1,6 @@
 /**
  * @file MessageBroker.cpp
- * Implementation of a message broker working in a publish-subscribe scheme used to exchange messages between threads.
+ * Implementation of a message broker working in a publish-subscribe pattern used to exchange messages between threads.
  */
 
 #include "MessageBroker.h"

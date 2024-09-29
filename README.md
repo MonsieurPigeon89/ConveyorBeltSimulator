@@ -35,5 +35,5 @@ Simplified relations between classes can be shown as below:
 			* Luggage
 
 Each conveyor belt runs in a separate thread as an individual component.
-Information exchange between ConveyorBelts and the ConveyorBeltSystem is done via MessageBroker working in a publish-subscribe scheme.
+Information exchange between ConveyorBelts and the ConveyorBeltSystem is done via MessageBroker working in a publish-subscribe pattern.
 The publish-subscribe MessageBroker seemed like the best way to handle the communication between the threads.

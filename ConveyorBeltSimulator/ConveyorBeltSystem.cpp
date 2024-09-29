@@ -13,10 +13,10 @@ ConveyorBeltSystem::ConveyorBeltSystem(MessageBroker& message_broker)
 	, _conveyor_belts_count{ 0 } 
 	, _luggage_count{ 0 }
 {
-	std::string topic_luggage_belt_change = "luggage_changing_belt";
+	std::string topic{ message_topics::luggage_changing_belt };
 	std::function<void(const std::shared_ptr<Message>)> luggage_belt_change_callback =
 		std::bind(&ConveyorBeltSystem::onBeltChangeMsgRcvd, this, std::placeholders::_1);
-	_messageBroker.subscribe(topic_luggage_belt_change, luggage_belt_change_callback);
+	_messageBroker.subscribe(topic, luggage_belt_change_callback);
 }
 
 void ConveyorBeltSystem::addConveyorBelt(std::shared_ptr<ConveyorBelt> conveyor_belt)

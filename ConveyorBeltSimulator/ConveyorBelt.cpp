@@ -52,7 +52,7 @@ void ConveyorBelt::moveLuggages(float move_distance)
 		} else {
 			/* luggage leaves the belt */
 			/* notify the conveyor belt system about the luggage changing the belts */
-			std::string topic = "luggage_changing_belt";
+			std::string topic{ message_topics::luggage_changing_belt };
 			const std::shared_ptr<MsgLuggageChangingBelt> msg_luggage_changing_belt = std::make_shared<MsgLuggageChangingBelt>();
 			msg_luggage_changing_belt->_luggage_changing_belt = _luggages.at(i);
 			_messageBroker.publish(topic, msg_luggage_changing_belt);

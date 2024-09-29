@@ -7,6 +7,13 @@
 
 #include <cstdint>
 
+namespace message_topics
+{
+	inline constexpr char luggage_changing_belt[] = "luggage_changing_belt";
+	inline constexpr char another_topic_1[] = "another_topic_1";
+	inline constexpr char another_topic_2[] = "another_topic_2";
+}
+
 enum class MessageId : uint32_t
 {
 	NULL_MSG = 0,

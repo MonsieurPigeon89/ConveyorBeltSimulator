@@ -35,11 +35,11 @@ private:
 	void task();
 
 	/**
-	* moves the luggage by a certain distance [m]
+	* moves all luggages that are on the conveyor belt by a certain distance [m]
 	*/
-	void moveLuggages(float distance);	/* moves all luggages that are on the conveyor belt */
+	void moveLuggages(float distance);
 
-	MessageBroker& _messageBroker;	/* message broker for passing messages between threads in a publish-subscribe scheme*/
+	MessageBroker& _messageBroker;	/* message broker for passing messages between threads in a publish-subscribe pattern */
 
 	std::vector<std::shared_ptr<Luggage>> _luggages;	/* luggages occupying the belt */
 

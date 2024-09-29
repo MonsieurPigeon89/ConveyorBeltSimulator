@@ -1,6 +1,6 @@
 /**
  * @file MessageBroker.h
- * Definition of a message broker working in a publish-subscribe scheme used to exchange messages between threads.
+ * Definition of a message broker working in a publish-subscribe pattern used to exchange messages between threads.
  */
 
 #pragma once
