@@ -22,6 +22,10 @@ ConveyorBeltSimulator::ConveyorBeltSimulator()
 	_conv_belt_system.addConveyorBelt(std::make_shared<ConveyorBelt>(_message_broker, 10.0f, 1.0f, 2));
 	_conv_belt_system.addConveyorBelt(std::make_shared<ConveyorBelt>(_message_broker, 10.0f, 1.0f, 3));
 	_conv_belt_system.addConveyorBelt(std::make_shared<ConveyorBelt>(_message_broker, 10.0f, 2.0f, 4));
+
+	/* set cout precision once at init to improve performance */
+	std::cout.precision(1);
+	std::cout << std::fixed;
 }
 
 void ConveyorBeltSimulator::run()

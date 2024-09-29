@@ -49,9 +49,6 @@ void ConveyorBeltSystem::update()
 
 void ConveyorBeltSystem::printStatus()
 {
-	std::cout.precision(1);
-	std::cout << std::fixed;
-
 	for (uint8_t i = 0; i < _conveyor_belts_count; i++) {
 		std::cout 
 			<< "B" << static_cast<uint32_t>(i+1) 

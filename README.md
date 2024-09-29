@@ -8,7 +8,7 @@ To run, open the terminal in the program directory and enter command:
 ./luggage_belts
 ```
 
-The simulation will start with no luggage. To add luggage, simply press "l" key.
+The simulation will start with no luggage. To add luggage, simply press "L" key.
 
 ## Design decisions
 The conveyor belt simulator is build from classes that try to mimic a physical conveyor belt system.
@@ -34,6 +34,6 @@ Simplified relations between classes can be shown as below:
 			* Luggage
 			* Luggage
 
-Each conveyor belt runs in a separate thread as an individual component.
+Each conveyor belt runs in a separate thread as an independent component.
 Information exchange between ConveyorBelts and the ConveyorBeltSystem is done via MessageBroker working in a publish-subscribe pattern.
 The publish-subscribe MessageBroker seemed like the best way to handle the communication between the threads.
