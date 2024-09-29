@@ -10,8 +10,6 @@
 #include <chrono>
 #include <iostream>
 
-//static std::mutex conveyor_belt_mutex;
-
 ConveyorBelt::ConveyorBelt(MessageBroker& messageBroker, float length, float velocity, uint8_t id)
 	: _messageBroker{ messageBroker }
 	, _task_thread{ &ConveyorBelt::task, this }
@@ -71,7 +69,8 @@ void ConveyorBelt::task()
 	while (1) {
 
 		/* compute expected number of simulation steps based on the elapsed time */
-		expected_invoke_count = static_cast<uint64_t>(time_counter.getElapsedTime() * sim_config::sim_freq + 0.5f); /* 0.5 compensates for float to int truncation */
+		expected_invoke_count = static_cast<uint64_t>(time_counter.getElapsedTime() * sim_config::sim_freq + 0.5f); 
+		/* 0.5 compensates for float to int truncation */
 
 		/* perform simulation step while the actual simulation step count is less than the expected one */
 		while (actual_invoke_count < expected_invoke_count) {

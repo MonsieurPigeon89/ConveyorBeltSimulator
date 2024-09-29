@@ -51,11 +51,11 @@ private:
 	*/
 	void changeBelt(std::shared_ptr<Luggage> luggage);
 
-	MessageBroker& _messageBroker;	/* message broker for passing messages between threads in a publish-subscribe scheme*/
+	MessageBroker& _messageBroker;	/* message broker for passing messages between threads in a publish-subscribe pattern */
 
 	std::vector<std::shared_ptr<ConveyorBelt>> _conveyor_belts;		/* conveyor belts building the conveyor belt system */
 	std::vector<std::shared_ptr<Luggage>> _luggages;				/* luggages ocupying the belt system */
-	std::vector<std::shared_ptr<Luggage>> _luggages_changing_belts;	/* lugguges that currently are changing the belts */
+	std::vector<std::shared_ptr<Luggage>> _luggages_changing_belts;	/* lugguges that are currently changing the belts */
 
 	uint8_t _conveyor_belts_count;	/* number of conveyor belts in the conveyor belt system */
 	uint32_t _luggage_count;		/* number of luggages stored on the conveyor belt system */

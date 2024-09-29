@@ -76,6 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Michal\source\repos\MonsieurPigeon89\ConveyorBeltSimulator\ConveyorBeltSimulator\msg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -90,6 +91,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Michal\source\repos\MonsieurPigeon89\ConveyorBeltSimulator\ConveyorBeltSimulator\msg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -105,6 +107,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\Michal\source\repos\MonsieurPigeon89\ConveyorBeltSimulator\ConveyorBeltSimulator\msg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,6 +122,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Michal\source\repos\MonsieurPigeon89\ConveyorBeltSimulator\ConveyorBeltSimulator\msg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,25 +132,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ConveyorBelt.cpp" />
-    <ClCompile Include="ConveyorBeltSimulator.cpp" />
-    <ClCompile Include="ConveyorBeltSystem.cpp" />
-    <ClCompile Include="Luggage.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="MessageBroker.cpp" />
-    <ClCompile Include="TimeCounter.cpp" />
+    <ClInclude Include="msg\Message.h" />
+    <ClInclude Include="msg\MessageIdList.h" />
+    <ClInclude Include="msg\MsgLuggageChangingBelt.h" />
+    <ClInclude Include="src\ConveyorBelt.h" />
+    <ClInclude Include="src\ConveyorBeltSimulator.h" />
+    <ClInclude Include="src\ConveyorBeltSystem.h" />
+    <ClInclude Include="src\Luggage.h" />
+    <ClInclude Include="src\MessageBroker.h" />
+    <ClInclude Include="src\SimulationConfig.h" />
+    <ClInclude Include="src\TimeCounter.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ConveyorBelt.h" />
-    <ClInclude Include="ConveyorBeltSimulator.h" />
-    <ClInclude Include="ConveyorBeltSystem.h" />
-    <ClInclude Include="Luggage.h" />
-    <ClInclude Include="Message.h" />
-    <ClInclude Include="MessageBroker.h" />
-    <ClInclude Include="MessageIdList.h" />
-    <ClInclude Include="MsgLuggageChangingBelt.h" />
-    <ClInclude Include="SimulationConfig.h" />
-    <ClInclude Include="TimeCounter.h" />
+    <ClCompile Include="src\ConveyorBelt.cpp" />
+    <ClCompile Include="src\ConveyorBeltSimulator.cpp" />
+    <ClCompile Include="src\ConveyorBeltSystem.cpp" />
+    <ClCompile Include="src\Luggage.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MessageBroker.cpp" />
+    <ClCompile Include="src\TimeCounter.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
