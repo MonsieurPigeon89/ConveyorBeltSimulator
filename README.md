@@ -2,10 +2,11 @@
 ## How to build on Ubuntu
 
 
-
 ## How to run and use
 To run, open the terminal in the program directory and enter command:
+```
 ./luggage_belts
+```
 
 The simulation will start with no luggage. To add luggage, simply press "l" key.
 
