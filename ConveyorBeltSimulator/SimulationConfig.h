@@ -8,7 +8,7 @@
 /* Simulation configuration */
 namespace sim_config		
 {
-	inline constexpr float sim_freq = 200.0f;			/* Simulation frequency [Hz] */
+	inline constexpr float sim_freq = 100.0f;			/* Simulation frequency [Hz] */
 	inline constexpr float sim_dt = 1.0f / sim_freq;	/* Simulation delta time [s] */
 
 } // namespace sim_config

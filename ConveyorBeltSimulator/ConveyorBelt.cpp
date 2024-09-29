@@ -80,6 +80,6 @@ void ConveyorBelt::task()
 		}
 
 		/* sleep for a while to leave room for other threads */
-		std::this_thread::sleep_for(std::chrono::milliseconds(5));
+		std::this_thread::sleep_for(std::chrono::milliseconds(2));
 	}
 }
