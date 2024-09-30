@@ -36,7 +36,6 @@ uint32_t Luggage::getId() const
 
 float Luggage::getPositionOnBelt() const
 {
-
 	return _position_on_belt;
 }
 
